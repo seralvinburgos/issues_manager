@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 
 {% block title %}{{ issue.summary }}{% endblock title %}
@@ -6,6 +7,8 @@
 
 {% block content %}
 <h1>Issue #{{ issue.id }}</h1>
+<div class="container detailList w-50 rounded">
+<br>
 <p><b>Summary: </b> {{ issue.summary }}</p>
 <p><b>Reported by: </b> {{ issue.reporter }}</p>
 <p><b>Reported on: </b> {{ issue.created_on }}</p>
@@ -14,4 +17,5 @@
 <p><b>Priority: </b> {{ issue.priority }}</p>
 <p><b>Description: </b></p>
 <p>{{ issue.description }}</p>
+</div>
 {% endblock content %}

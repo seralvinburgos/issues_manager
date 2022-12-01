@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(32, 33, 36);
+    color: rgba(248, 249, 250);
+    font-family: 'Space Grotesk', sans-serif;
+}
+h1 {
+    margin: 2rem 0;
+    color: white;
+    text-align: center;
+}
+h3 {
+    margin: 1rem 0;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+p {
+    font-size: small;
+}
+small {
+    font-size: x-small;
+}
+.detailList {
+    background-color: rgba(90, 90, 90, 0.886);
+    height: 35vh;
+}
