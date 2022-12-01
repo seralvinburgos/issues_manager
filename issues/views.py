@@ -9,7 +9,7 @@ class BoardView(ListView):
     template_name = "issues/board.html"
     model = Issue
 
-    def get_context_dat(self, **kwargs):
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         to_do_status = Status.objects.get(name="to do")
         in_p_status = Status.objects.get(name="in progress")
