@@ -37,9 +37,10 @@ class Issue(models.Model):
     assignee = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE,
-        null=True
+        null=True,
+        related_name="assignee",
     )
-    created_on = models.DateTimeField(auto_add_now=True)
+    created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.summary[:500]

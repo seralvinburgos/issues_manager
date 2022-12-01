@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Board{% endblock title %}
+
+{% block content %}
+<style>
+    .list_one {
+        background-color: lightgreen;
+        height: 50vh;
+    }
+    .list_two {
+        background-color: lightblue;
+        height: 50vh;
+    }
+    .list_three {
+        background-color: lightsalmon;
+        height: 50vh;
+    }
+</style>
+
+
+<h1>Issues</h1>
+
+<div class="container-fluid d-flex flex-row gap-1">
+    <div class="container list_one col-4">
+        <h3>To Do</h3>
+        <div class="row">
+            <div class="col-4">
+                {% for issue in to_do_list %}
+                <a href="{% url 'issue_detail' issue.id %}">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ issue.summary | truncatechars:150 }}</h5>
+                        <small>Reported by: {{ issue.reporter }}</small>
+                        <p class="card-text">{{ issue.description | truncatechars:250 }}</p>
+                    </div>
+                </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="container list_two col-4">
+        <h3>In Progress</h3>
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ issue.summary }} | truncatechars:150 }}</h5>
+                        <small>Reported by: {{ issue.reporter }}</small>
+                        <p class="card-text">{{ issue.description | truncatechars:250 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container list_three col-4">
+        <h3>Done</h3>
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+{% endblock content %}
