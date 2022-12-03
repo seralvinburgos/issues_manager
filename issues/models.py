@@ -46,4 +46,4 @@ class Issue(models.Model):
         return self.summary[:500]
 
     def get_absolute_url(self):
-        return reverse('detail', args=[self.id])
+        return reverse('issue_detail', args=[self.id])

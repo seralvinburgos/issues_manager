@@ -6,45 +6,9 @@
 
 {% block content %}
 <h1>New Issue</h1>
-{{ form.as_p }}
-
-<form class="fillBox" method="POST">
+<form method="POST">
+    {{ form.as_p }}
     {% csrf_token %}
-    <div class="mb-3 w-50 mx-auto">
-        <label for="id_summary" class="form-label">Summary:</label>
-        <input type="text" class="form-control" name="summary" maxlength="1024" required id="id_summary">
-    </div>
-    <div class="mb-3 w-50 mx-auto">
-        <label for="id_description" class="form-label">Description:</label>
-        <textarea name="description" class="form-control" required id="id_description" rows="5"></textarea>
-    </div>
-    <div class="mb-3 w-50 mx-auto">
-        <label class="mb-2" for="id_priority">Priority:</label>
-        <select name="priority" class="form-select" required id="id_priority">
-            <option selected>---------</option>
-            <option value="1">low</option>
-            <option value="2">medium</option>
-            <option value="3">high</option>
-        </select>
-    </div>
-    <div class="mb-3 w-50 mx-auto">
-        <label class="mb-2" for="id_status">Status:</label>
-        <select name="status" class="form-select" required id="id_status">
-            <option selected>---------</option>
-            <option value="1">to do</option>
-            <option value="2">in progress</option>
-            <option value="3">done</option>
-        </select>
-    </div>
-    <p>
-    <div class="mb-3 w-50 mx-auto">
-        <label class="mb-2" for="id_assignee">Assignee:</label>
-        <select name="assignee" class="form-select" required="" id="id_assignee">
-            <option value selected>---------</option>
-        </select>
-    </div>
-    </p>
+    <input type="submit" value="Create" class="btn btn-success">
 </form>
-<input type="submit" value="Create" class="btn btn-success">
-    
 {% endblock content %}
