@@ -7,10 +7,7 @@
     font-family: 'Space Grotesk', sans-serif;    
 }
 #homeLeft {
-    font-size: 45px;
-}
-#titleBug {
-    font-size: 60px;
+    font-size: 50px;
 }
 .navbar-brand {
     color: goldenrod;
@@ -31,10 +28,21 @@ h3 {
 }
 a {
     text-decoration: none;
-    color: black;
 }
 p {
     font-size: small;
+}
+.card-body {
+    color: black;
+}
+#aboutDesc {
+    text-align: center;
+    font-size: large;
+    padding-inline: 10rem;
+}
+.aboutLow {
+    background-color: rgba(90, 90, 90, 0.886);
+    height: 15rem;
 }
 small {
     font-size: x-small;
@@ -43,6 +51,7 @@ small {
     box-sizing: content-box;
     background-color: rgba(90, 90, 90, 0.886);
     height: 90px;
+    margin-top: 5rem;
     padding: 50px 30px;
     display: flex;
     border-radius: 8px;
@@ -54,7 +63,7 @@ small {
 #moving {
     display: block;
     height: 100%;
-    font-size: 45px;
+    font-size: 50px;
     padding-left: 10px;
     color: goldenrod;
     animation: spin_words 6s infinite;
@@ -85,7 +94,6 @@ small {
         transform: translateY(-400%);
     }
 }
-
 .list_one {
     background-color: rgba(90, 90, 90, 0.886);
     height: 70vh;
@@ -101,4 +109,31 @@ small {
 .detailList {
     background-color: rgba(90, 90, 90, 0.886);
     height: 35vh;
+}
+
+.aboutRow {
+    height: 18rem;
+    background-color: rgba(160, 160, 160, 0.886)
+}
+.picLeft {
+    background-image: url(/static/img/picLeft.jpg);
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.picMiddle {
+    background-image: url(/static/img/picMiddle.jpg);
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.picRight {
+    background-image: url(/static/img/picRight.jpg);
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.aboutBottom {
+    background-color: rgba(90, 90, 90, 0.886);
+    height: 22rem;
 }

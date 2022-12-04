@@ -16,11 +16,11 @@
                 <div class="card w-100 mt-2">
                     <div class="card-body">
                         <h6 class="card-title">{{ issue.summary | truncatechars:150 }}</h5>
+                        </a>
                         <small>Reported by: {{ issue.reporter }}</small>
                         <p class="card-text">{{ issue.description | truncatechars:250 }}</p>
                     </div>
                 </div>
-                </a>
                 {% endfor %}
             </div>
         </div>
