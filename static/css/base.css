@@ -17,36 +17,6 @@ body {
     color: rgba(248, 249, 250);
     font-family: 'Space Grotesk', sans-serif;
 }
-h1 {
-    margin: 2rem 0;
-    color: white;
-    text-align: center;
-}
-h3 {
-    margin: 1rem 0;
-    text-align: center;
-}
-a {
-    text-decoration: none;
-}
-p {
-    font-size: small;
-}
-.card-body {
-    color: black;
-}
-#aboutDesc {
-    text-align: center;
-    font-size: large;
-    padding-inline: 10rem;
-}
-.aboutLow {
-    background-color: rgba(90, 90, 90, 0.886);
-    height: 15rem;
-}
-small {
-    font-size: x-small;
-}
 .wrapper {
     box-sizing: content-box;
     background-color: rgba(90, 90, 90, 0.886);
@@ -94,6 +64,36 @@ small {
         transform: translateY(-400%);
     }
 }
+h1 {
+    margin: 2rem 0;
+    color: white;
+    text-align: center;
+}
+h3 {
+    margin: 1rem 0;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+p {
+    font-size: small;
+}
+.card-body {
+    color: black;
+}
+#aboutDesc {
+    text-align: center;
+    font-size: large;
+    padding-inline: 10rem;
+}
+.aboutLow {
+    background-color: rgba(90, 90, 90, 0.886);
+    height: 15rem;
+}
+small {
+    font-size: x-small;
+}
 .list_one {
     background-color: rgba(90, 90, 90, 0.886);
     height: 70vh;
@@ -107,8 +107,9 @@ small {
     height: 70vh;
 }
 .detailList {
+    box-sizing: border-box;
     background-color: rgba(90, 90, 90, 0.886);
-    height: 35vh;
+    height: 50vh;
 }
 
 .aboutRow {
@@ -135,5 +136,5 @@ small {
 }
 .aboutBottom {
     background-color: rgba(90, 90, 90, 0.886);
-    height: 22rem;
+    height: 25rem;
 }

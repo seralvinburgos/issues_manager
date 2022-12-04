@@ -4,6 +4,11 @@
 {% block title %}Edit{% endblock title %}
 
 {% block content %}
-<h1>Edit</h1>
+<h1>Edit Issue</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update" class="btn btn-success">
+</form>
 
 {% endblock content %}
